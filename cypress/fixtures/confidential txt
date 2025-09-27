@@ -1,0 +1,2 @@
+cy.get('input[id="P0-0"]').as('fupInput');
+('cypress/fixtures/confidential txt')

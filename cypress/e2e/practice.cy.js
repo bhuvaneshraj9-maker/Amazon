@@ -1,17 +1,18 @@
 describe('Test ecommerce',()=>{
-    let data;
-    before(()=>{
-      cy.fixture('example').then((tdata)=>{
-        data=tdata
+       let loginPage= new LoginPage();
+     let data;
+     before(()=>{
+    cy.fixture('example').then((tdata)=>{
+         data=tdata
       })  
     })
     it('validate adding products to the cart and successful order placement',()=>{
         cy.visit('/')
         cy.loginCredFills(data.usename,data.password)
         cy.get('#inventory_container .inventory_item').each(($productcards)=>{
-            if($productcards.text().includes('Bike')){
-                cy.wrap($productcards).find('[class="btn_primary btn_inventory"]').click()
-            }
+             if($productcards.text().includes('Bike')){
+                 cy.wrap($productcards).find('[class="btn_primary btn_inventory"]').click()
+           }
             
 
         })
@@ -37,4 +38,4 @@ describe('Test ecommerce',()=>{
             expect(Number(weWant)).to.eq(sum)  
         })
     })
-})
+   })

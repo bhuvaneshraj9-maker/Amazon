@@ -1,4 +1,4 @@
-describe('verify the username loin',()=>{
+describe('verify the username login',()=>{
     it('swaglabs',()=>{
         cy.visit('https://www.saucedemo.com/v1/')
         cy.url('').should('include','https://www.saucedemo.com/v1/')

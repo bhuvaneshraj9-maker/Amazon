@@ -13,10 +13,10 @@
 // Cypress.Commands.add('login', (email, password) => {...})
  Cypress.Commands.add('loginCredFills', (Usern,userp) =>{
     cy.get('#user-name').type(Usern)
-        cy.get('#password').type(userp)
+         cy.get('#password').type(userp)
         cy.get('#login-button').click()
- })
-//
+  })
+
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
 //
